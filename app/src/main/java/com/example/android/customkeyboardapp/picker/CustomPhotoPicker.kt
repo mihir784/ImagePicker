@@ -1,6 +1,6 @@
-package com.example.android.customkeyboardapp
+package com.example.android.customkeyboardapp.picker
 
-import com.example.android.customkeyboardapp.loader.ImageLoader
+import com.example.android.customkeyboardapp.loaders.ImageLoader
 
 class CustomPhotoPicker {
 

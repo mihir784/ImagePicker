@@ -1,19 +1,12 @@
 
 package com.example.android.customkeyboardapp
 
-import android.content.ContentResolver
-import android.inputmethodservice.Keyboard
-import android.inputmethodservice.KeyboardView
-import android.location.Location
 import android.os.Bundle
-import android.view.KeyEvent
-import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android.customkeyboardapp.loaders.GlideImageLoader
-import java.util.*
+import com.example.android.customkeyboardapp.picker.CustomPhotoPicker
+import com.example.android.customkeyboardapp.picker.PhotoPickerFragment
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,10 +14,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val et = findViewById<EditText>(R.id.etvInput)
+        btShowImagePicker.setOnClickListener {
+
+            CustomPhotoPicker().init(
+                loader = GlideImageLoader(),
+                authority = "com.example.android.customkeyboardapp.fileprovider"
+            )
+
+            PhotoPickerFragment.newInstance(
+                multiple = true,
+                allowCamera = true,
+                maxSelection = 5,
+                theme = R.style.CustomDark
+            ).show(supportFragmentManager, "picker")
+        }
+
+
+        /*val et = findViewById<EditText>(R.id.etvInput)
         val btChangeLanguage = findViewById<Button>(R.id.btChangeLanguage)
         var currLanguage = 0
-        /*et.imeHintLocales = (LocaleList(Locale("hi_IN")))*/
+        *//*et.imeHintLocales = (LocaleList(Locale("hi_IN")))*//*
 
         val hindiKeyboard1 = Keyboard(this, R.xml.hindi_keyboard_1)
         val hindiKeyboard2 = Keyboard(this, R.xml.hindi_keyboard_2)
@@ -33,14 +42,14 @@ class MainActivity : AppCompatActivity() {
         val keyboardView = findViewById<KeyboardView>(R.id.kbvInput)
         keyboardView.keyboard = hindiKeyboard1
 
-        /*
+        *//*
         Handle
         All
         Swipe
         Events
         !
         !
-         */
+         *//*
         keyboardView.setOnKeyboardActionListener(object :
             KeyboardView.OnKeyboardActionListener {
             override fun onPress(p0: Int) {
@@ -134,7 +143,7 @@ class MainActivity : AppCompatActivity() {
             return@OnTouchListener false
         })
 
-        /*btChangeLanguage.setOnClickListener {
+        *//*btChangeLanguage.setOnClickListener {
             if ( currLanguage == 0){
                keyboardView.keyboard = gujaratiKeyboard1
                 currLanguage = 1
@@ -142,23 +151,8 @@ class MainActivity : AppCompatActivity() {
                 keyboardView.keyboard = hindiKeyboard1
                 currLanguage = 0
             }
-        }*/
-
-        btChangeLanguage.setOnClickListener {
-
-            CustomPhotoPicker().init(
-                loader = GlideImageLoader(),
-                authority = "com.example.android.customkeyboardapp.fileprovider"
-            )
-
-            PhotoPickerFragment.newInstance(
-                multiple = true,
-                allowCamera = true,
-                maxSelection = 5,
-                theme = R.style.CustomDark
-            ).show(supportFragmentManager, "picker")
-        }
-
+        }*//*
+*/
         /*val userLocation = LocationFinder()
         val locationEnabled: Boolean = userLocation.getLocation(this, object: LocationFinder.LocationResult(){
             override fun gotLocation(location: Location?) {

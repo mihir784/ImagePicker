@@ -1,6 +1,6 @@
-package com.example.android.customkeyboardapp
+package com.example.android.customkeyboardapp.picker
 
-import com.example.android.customkeyboardapp.loader.ImageLoader
+import com.example.android.customkeyboardapp.loaders.ImageLoader
 
 internal object PickerConfiguration {
 
@@ -8,8 +8,8 @@ internal object PickerConfiguration {
     private var authority: String? = null
 
     fun setUp(imageLoader: ImageLoader, authority: String?) {
-        this.imageLoader = imageLoader
-        this.authority = authority
+        PickerConfiguration.imageLoader = imageLoader
+        PickerConfiguration.authority = authority
     }
 
     fun getImageLoader(): ImageLoader =

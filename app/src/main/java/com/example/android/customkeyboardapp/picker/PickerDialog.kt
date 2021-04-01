@@ -1,4 +1,4 @@
-package com.example.android.customkeyboardapp
+package com.example.android.customkeyboardapp.picker
 
 import android.content.Context
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatDialog
+import com.example.android.customkeyboardapp.R
 
 class PickerDialog(
     context: Context,

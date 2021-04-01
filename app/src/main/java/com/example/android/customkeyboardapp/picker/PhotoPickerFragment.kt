@@ -1,4 +1,4 @@
-package com.example.android.customkeyboardapp
+package com.example.android.customkeyboardapp.picker
 
 import android.Manifest
 import android.app.Activity
@@ -25,7 +25,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android.customkeyboardapp.PickerViewModel.Companion.SELECTION_UNDEFINED
+import com.example.android.customkeyboardapp.R
+import com.example.android.customkeyboardapp.picker.PickerViewModel.Companion.SELECTION_UNDEFINED
 import com.example.android.customkeyboardapp.adapter.ImagePickerAdapter
 import com.example.android.customkeyboardapp.adapter.SelectableImage
 import com.example.android.customkeyboardapp.ext.Intents

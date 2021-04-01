@@ -1,4 +1,4 @@
-package com.example.android.customkeyboardapp
+package com.example.android.customkeyboardapp.picker
 
 import android.database.Cursor
 import android.net.Uri
@@ -55,6 +55,7 @@ internal class PickerViewModel : ViewModel() {
                     .map { readValueAtCursor(cursor) }
                     .toList()
             )
+            // Add gallery button
             array.add(
                 0, SelectableImage(
                     0,

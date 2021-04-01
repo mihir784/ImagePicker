@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android.customkeyboardapp.PhotoPickerFragment
+import com.example.android.customkeyboardapp.picker.PhotoPickerFragment
 import com.example.android.customkeyboardapp.R
-import com.example.android.customkeyboardapp.loader.ImageLoader
+import com.example.android.customkeyboardapp.loaders.ImageLoader
 import kotlinx.android.synthetic.main.view_pickable_image.view.*
 
 class ImagePickerAdapter(
@@ -45,6 +45,7 @@ class ImagePickerAdapter(
             checkbox.isChecked = item.selected
         }
         if (item.id == 0) {
+            // View Gallery
             holder.view.apply {
                 checkbox.visibility = View.GONE
                 setOnClickListener {

@@ -1,4 +1,4 @@
-package com.example.android.customkeyboardapp.loader
+package com.example.android.customkeyboardapp.loaders
 
 import android.content.Context
 import android.net.Uri

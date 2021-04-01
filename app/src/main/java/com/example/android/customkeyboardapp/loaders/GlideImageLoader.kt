@@ -4,7 +4,6 @@ import android.content.Context
 import android.net.Uri
 import android.widget.ImageView
 import com.bumptech.glide.Glide
-import com.example.android.customkeyboardapp.loader.ImageLoader
 
 class GlideImageLoader: ImageLoader {
 
