@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CustomKeyboardApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="CustomLight" parent="Theme.MaterialComponents.NoActionBar.Bridge">
+        <item name="pickerBackgroundColor">@color/background_light</item>
+        <item name="pickerPrimaryColor">@color/text_primary_light</item>
+        <item name="pickerSecondaryColor">@color/text_secondary_light</item>
+        <item name="pickerControlColor">@color/controls_light</item>
+        <item name="pickerCornerRadius">@dimen/background_corner_radius</item>
+        <item name="pickerCameraIcon">@drawable/ic_picker_camera</item>
+        <item name="pickerGalleryIcon">@drawable/ic_picker_gallery</item>
+        <item name="pickerDividerColor">@color/divider_light</item>
+    </style>
+
+    <style name="CustomDark" parent="Theme.MaterialComponents.NoActionBar.Bridge">
+        <item name="pickerBackgroundColor">@color/background_dark</item>
+        <item name="pickerPrimaryColor">@color/text_primary_dark</item>
+        <item name="pickerSecondaryColor">@color/text_secondary_dark</item>
+        <item name="pickerControlColor">@color/controls_dark</item>
+        <item name="pickerCornerRadius">@dimen/background_corner_radius</item>
+        <item name="pickerCameraIcon">@drawable/ic_picker_camera</item>
+        <item name="pickerGalleryIcon">@drawable/ic_picker_gallery</item>
+        <item name="pickerDividerColor">@color/divider_dark</item>
+    </style>
+
+</resources>
